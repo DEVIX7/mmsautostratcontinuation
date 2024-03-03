@@ -43,7 +43,8 @@ end
 end)
 local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/libcode", true))()
 if getgenv().Multiplayer then
-        if not getgenv().Player2Id then getgenv().Player2Id=0 end
+        getgenv().host = "wsautostrats.devix7.online:25900"
+	if not getgenv().Player2Id then getgenv().Player2Id=0 end
         if not getgenv().Player3Id then getgenv().Player3Id=0 end
         if not getgenv().Player4Id then getgenv().Player4Id=0 end
         getgenv().player2J = false
