@@ -1,5 +1,6 @@
+# this fork original repo by xeon
 # what is that?
-this is the continuation of moneymaker's tower defense simulator(on roblox) autofarm.
+this is the continuation of moneymaker's autofarm.
 
 # recorder
 ```lua
@@ -14,4 +15,4 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcon
 just put ur strat to autoexec
 
 # discord server for this continuation
-https://discord.gg/gmeSxUWCyr
+https://discord.gg/gmeSxUWCyr (dead)
