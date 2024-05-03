@@ -316,11 +316,11 @@ w:Section("TimePassed")
     end)
 w:Section("")
 w:Button("Auto Chain (One Time Use)", function()
-loadstring(game:HttpGet(mainRawLink.."/autochain_v1.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DEVIX7/mmsautostratcontinuation/main/autochain_v1.lua", true))()
 end)
 w:Button("Auto Chain V2 (Multiple Uses)", function()
 if not getgenv().OtherCOAV2 then
-loadstring(game:HttpGet(mainRawLink.."/autochain_v2.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DEVIX7/mmsautostratcontinuation/main/autochain_v2.lua", true))()
 spawn(function()
 repeat task.wait() until getgenv().Coms ~= nil
 local ReplicatedStorage = game:GetService("ReplicatedStorage");
