@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/justincase/sjkdkjlfdjnnmklcvxjNotifCr"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DEVIX7/mmsautostratcontinuation/main/justincase/sjkdkjlfdjnnmklcvxjNotifCr"))()
 
 if not getgenv().OtherCOAV2 then
     getgenv().OtherCOAV2 = true
@@ -8,7 +8,7 @@ if not getgenv().OtherCOAV2 then
     local Commanders = {}
     local chainStatus = ""
     local rmF = game:GetService("ReplicatedStorage").RemoteFunction
-    local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/libcode", true))()
+    local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/DEVIX7/mmsautostratcontinuation/main/libcode", true))()
     local w = lib:CreateWindow("Auto Chain V2")
     w:Section("Status :")
     w:Section("ChainStatus")
