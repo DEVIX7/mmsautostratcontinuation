@@ -41,7 +41,7 @@ getgenv().ReportError = function(errorNum, Message)
   request(abcdef)
 end
 end)
-local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/libcode", true))()
+local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/DEVIX7/mmsautostratcontinuation/main/libcode", true))()
 if getgenv().Multiplayer then
         getgenv().host = "wsautostrats.devix7.online:25900"
 	if not getgenv().Player2Id then getgenv().Player2Id=0 end
@@ -1385,7 +1385,7 @@ if isgame() then
 			if getgenv().DefaultCam ~= nil then
 				camc = getgenv().DefaultCam
 			end
-			local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/librarycode2", true))()
+			local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/DEVIX7/mmsautostratcontinuation/main/librarycode2", true))()
 			local w = library:CreateWindow("Camera")
 			w:Button('Normal', function()
 				game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
@@ -1612,7 +1612,7 @@ if getgenv().GoldenPerks then
 	appendfile(fileprefix.."LastStrat_"..PlayerUserId..".txt",generateline)
 end
 printall("Golden perks added")
-appendfile(fileprefix.."LastStrat_"..PlayerUserId..".txt","local TDS = loadstring(game:HttpGet(\"https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autostratscode.txt\", true))()\n")
+appendfile(fileprefix.."LastStrat_"..PlayerUserId..".txt","local TDS = loadstring(game:HttpGet(\"https://raw.githubusercontent.com/DEVIX7/mmsautostratcontinuation/main/autostratscode.txt\", true))()\n")
 function scrip:Map(map, antimulti, type)
 	appendfile(fileprefix.."LastStrat_"..PlayerUserId..".txt","TDS:Map('"..map.."', "..tostring(antimulti)..", '"..type.."')\n")
 	getgenv().mapc = map
