@@ -1,4 +1,4 @@
-local RecVersion = "V2.4"
+local RecVersion = "V2.4 (fork)"
 local ReplicatedStorage = game:GetService("ReplicatedStorage");
 local State = ReplicatedStorage.State;
 local RS = game:WaitForChild('ReplicatedStorage')
@@ -7,6 +7,7 @@ local RSRE = RS:WaitForChild("RemoteEvent")
 getgenv().Towers = {}
 getgenv().GoldenPerks = {}
 getgenv().Generated = ""
+local mainRawLink = "https://raw.githubusercontent.com/DEVIX7/mmsautostratcontinuation/main" -- forked repo url
 --getgenv().StratName..".txt"
 for i,v in pairs(game:GetService("CoreGui"):GetDescendants()) do if v:IsA("Frame") and v.Name == "What do you do?" then v:Remove() end end
 for TowerName, Tower in next, game.ReplicatedStorage.RemoteFunction:InvokeServer("Session", "Search", "Inventory.Troops") do
@@ -27,9 +28,9 @@ if getgenv().GoldenPerks[1] then
     gperksl = gperksl.."}\n"
 end
     if gperksl ~= "" then
-        getgenv().Generated = getgenv().Generated.."--"..RecVersion.."\n"..gperksl..'local '..getgenv().APIVar..' = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autostratscode.txt", true))() \n'..getgenv().APIVar..':Loadout("'..getgenv().Towers[1]..'", "'..getgenv().Towers[2]..'", "'..getgenv().Towers[3]..'", "'..getgenv().Towers[4]..'", "'..getgenv().Towers[5]..'") \n'..getgenv().APIVar..':Map("'..game:GetService("ReplicatedStorage").State.Map.Value..'", true, "'..game:GetService("ReplicatedStorage").State.Mode.Value..'")\n';
+        getgenv().Generated = getgenv().Generated.."--"..RecVersion.."\n"..gperksl..'local '..getgenv().APIVar..' = loadstring(game:HttpGet("' .. mainRawLink .. '/autostratscode.txt", true))() \n'..getgenv().APIVar..':Loadout("'..getgenv().Towers[1]..'", "'..getgenv().Towers[2]..'", "'..getgenv().Towers[3]..'", "'..getgenv().Towers[4]..'", "'..getgenv().Towers[5]..'") \n'..getgenv().APIVar..':Map("'..game:GetService("ReplicatedStorage").State.Map.Value..'", true, "'..game:GetService("ReplicatedStorage").State.Mode.Value..'")\n';
     else
-        getgenv().Generated = getgenv().Generated .. "--"..RecVersion.."\n"..'local '..getgenv().APIVar..' = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autostratscode.txt", true))() \n'..getgenv().APIVar..':Loadout("'..getgenv().Towers[1]..'", "'..getgenv().Towers[2]..'", "'..getgenv().Towers[3]..'", "'..getgenv().Towers[4]..'", "'..getgenv().Towers[5]..'") \n'..getgenv().APIVar..':Map("'..game:GetService("ReplicatedStorage").State.Map.Value..'", true, "'..game:GetService("ReplicatedStorage").State.Mode.Value..'")\n';
+        getgenv().Generated = getgenv().Generated .. "--"..RecVersion.."\n"..'local '..getgenv().APIVar..' = loadstring(game:HttpGet("' .. mainRawLink .. '/autostratscode.txt", true))() \n'..getgenv().APIVar..':Loadout("'..getgenv().Towers[1]..'", "'..getgenv().Towers[2]..'", "'..getgenv().Towers[3]..'", "'..getgenv().Towers[4]..'", "'..getgenv().Towers[5]..'") \n'..getgenv().APIVar..':Map("'..game:GetService("ReplicatedStorage").State.Map.Value..'", true, "'..game:GetService("ReplicatedStorage").State.Mode.Value..'")\n';
     end
 function sendw(message)
 spawn(function()
@@ -210,7 +211,7 @@ if getgenv().LoggerWindow then
         prevOutputPos = prevOutputPos + 0.0005
     end
 end
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/jsdnfjdsfdjnsmvkjhlkslzLIB", true))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/jsdnfjdsfdjnsmvkjhlkslzLIB", true))() -- money maker git
 if game.PlaceId == 5591597781 then
 getgenv().recstatus = "Recording"
 if getgenv().LoggerWindow then
@@ -315,11 +316,11 @@ w:Section("TimePassed")
     end)
 w:Section("")
 w:Button("Auto Chain (One Time Use)", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autochainv1"))()
+loadstring(game:HttpGet(mainRawLink.."/autochainv1"))()
 end)
 w:Button("Auto Chain V2 (Multiple Uses)", function()
 if not getgenv().OtherCOAV2 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/tdsautochainv2"))()
+loadstring(game:HttpGet(mainRawLink.."/tdsautochainv2"))()
 spawn(function()
 repeat task.wait() until getgenv().Coms ~= nil
 local ReplicatedStorage = game:GetService("ReplicatedStorage");
